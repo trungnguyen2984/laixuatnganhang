@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="money"><br>
+    <input type="number" id="years"><br>
+    <input type="number" id="interest"><br>
+
+    <button type="submit" onclick="tinhLaixuat();">Tính lãi xuất</button>
+
+    <div id="hienthi"></div>
+    <script>
+        function tinhLaixuat(){
+            let money = parseInt(document.getElementById('money').value);
+            let years = parseInt(document.getElementById('years').value);
+            let interest = parseInt(document.getElementById('interest').value);
+
+            let laixuat = money + (money*years*interest);
+
+            document.getElementById('hienthi').innerHTML = "lãi xuất của bạn lả: " + laixuat;
+
+        }
+    </script>
+</body>
+</html>
